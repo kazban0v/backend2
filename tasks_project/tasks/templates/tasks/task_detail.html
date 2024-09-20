@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ object.title }}</h2>
+<p>{{ object.description }}</p>
+<p>Срок выполнения: {{ object.due_dtae }}</p>
+<p>Статус: {{ object.status }}</p>
+<p>Приоритет: {{ object.priority }}</p>
+<p>Категория: {{ object.category }}</p>
+<a href="{% url 'task_edit' pk=object.pk %}">Редактировать</a>
+<a href="{% url 'task_list' %}">Назад</a>
+
+{% endblock %}
